@@ -12,7 +12,7 @@ export default function Login() {
         const email = data.get("email");
         const password = data.get("password");
 
-        axios.post("http://localhost:1000/loginadmin", {
+        axios.post("https://investifynews-1.onrender.com/loginadmin", {
             Email: email,
             Password: password,
         }).then((succ) => {
