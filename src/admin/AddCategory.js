@@ -11,19 +11,19 @@ export default function AddCategory() {
         var data = new FormData(e.currentTarget);
         var cat = data.get("cat")
 
-        axios.post("http://localhost:1000/addcategories", {
+        axios.post("https://investifynews-1.onrender.com/addcategories", {
             Cat: cat
         }).then((succ) => {
             alert("Category added successfully!");
             e.target.reset();
             fetchcategories();
-        }) 
+        })
     }
 
     const [cats, setcats] = useState([]);
 
     function fetchcategories() {
-        axios.post("http://localhost:1000/fetchcategories").then((Succ) => {
+        axios.post("https://investifynews-1.onrender.com/fetchcategories").then((Succ) => {
             setcats(Succ.data)
         })
     }
@@ -33,7 +33,7 @@ export default function AddCategory() {
     }, [])
 
     function dell(x) {
-        axios.post("http://localhost:1000/deletecategory", {
+        axios.post("https://investifynews-1.onrender.com/deletecategory", {
             Id: x,
         }).then((succ) => {
             if (succ.data == "ok") {

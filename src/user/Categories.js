@@ -24,14 +24,14 @@ export default function Categories() {
     ];
 
     function fetchcategories() {
-        axios.post("http://localhost:1000/fetchcategories")
+        axios.post("https://investifynews-1.onrender.com/fetchcategories")
             .then((succ) => {
                 setcats(succ.data);
             })
     }
 
     function fetcharticles() {
-        axios.post("http://localhost:1000/fetcharticles")
+        axios.post("https://investifynews-1.onrender.com/fetcharticles")
             .then((succ) => {
                 setarticles(succ.data);
             })

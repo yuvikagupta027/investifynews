@@ -8,7 +8,7 @@ export default function AddArticle() {
     const [cats, setcats] = useState([]);
 
     function fetchcategories() {
-        axios.post("http://localhost:1000/fetchcategories").then((Succ) => {
+        axios.post("https://investifynews-1.onrender.com/fetchcategories").then((Succ) => {
             setcats(Succ.data)
         })
     }
@@ -39,7 +39,7 @@ export default function AddArticle() {
         var image = data.get("image");
         var currentDate = new Date().toLocaleDateString();
 
-        axios.post("http://localhost:1000/submitarticle", {
+        axios.post("https://investifynews-1.onrender.com/submitarticle", {
             Title: title,
             Content: content,
             Category: category,

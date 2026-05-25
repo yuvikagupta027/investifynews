@@ -10,7 +10,7 @@ export default function Dashboard() {
 
     const [articles, setarticles] = useState([]);
     function fetcharticles() {
-        axios.post("http://localhost:1000/fetcharticles").then((succ) => {
+        axios.post("https://investifynews-1.onrender.com/fetcharticles").then((succ) => {
             setarticles(succ.data)
         })
     }

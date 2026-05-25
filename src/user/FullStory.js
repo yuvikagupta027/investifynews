@@ -15,7 +15,7 @@ export default function FullStory() {
     const [article, setarticle] = useState(null);
 
     function fetcharticle() {
-        axios.post("http://localhost:1000/fetchsinglearticles", {
+        axios.post("https://investifynews-1.onrender.com/fetchsinglearticles", {
             Id: articleId
         })
             .then((succ) => {

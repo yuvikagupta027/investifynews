@@ -12,7 +12,7 @@ export default function AllArticles() {
     const navi = useNavigate();
 
     function fetcharticles() {
-        axios.post("http://localhost:1000/fetcharticles").then((succ) => {
+        axios.post("https://investifynews-1.onrender.com/fetcharticles").then((succ) => {
             setarticles(succ.data)
         })
     }
@@ -21,7 +21,7 @@ export default function AllArticles() {
     }, [])
 
     function deletee(x) {
-        axios.post("http://localhost:1000/deletearticle", {
+        axios.post("https://investifynews-1.onrender.com/deletearticle", {
             Id: x,
         }).then((succ) => {
             if (succ.data == "ok") {

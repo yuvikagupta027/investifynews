@@ -25,7 +25,7 @@ export default function BulkUploadArticles() {
     }
 
     function uploadarticles() {
-        axios.post("http://localhost:1000/bulkuploadarticles", {
+        axios.post("https://investifynews-1.onrender.com/bulkuploadarticles", {
             Articles: exceldata
         }).then((succ) => {
             if (succ.data == "ok") {

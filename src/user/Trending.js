@@ -11,7 +11,7 @@ export default function Trending() {
     const navi = useNavigate();
 
     function fetcharticles() {
-        axios.post("http://localhost:1000/fetcharticles")
+        axios.post("https://investifynews-1.onrender.com/fetcharticles")
             .then((succ) => {
                 setarticles(succ.data);
             })

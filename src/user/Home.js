@@ -16,14 +16,14 @@ export default function Home() {
     const navi = useNavigate();
 
     function fetchcategories() {
-        axios.post("http://localhost:1000/fetchcategories")
+        axios.post("https://investifynews-1.onrender.com/fetchcategories")
             .then((succ) => {
                 setcats(succ.data);
             })
     }
 
     function fetchlatestarticle() {
-        axios.post("http://localhost:1000/fetcharticles")
+        axios.post("https://investifynews-1.onrender.com/fetcharticles")
             .then((succ) => {
                 const latest = succ.data[succ.data.length - 1];
                 setlatestarticle(latest);

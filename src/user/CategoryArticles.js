@@ -12,7 +12,7 @@ export default function CategoryArticles() {
     const [articles, setarticles] = useState([]);
 
     function fetcharticles() {
-        axios.post("http://localhost:1000/fetcharticles")
+        axios.post("https://investifynews-1.onrender.com/fetcharticles")
             .then((succ) => {
                 const filtered = succ.data.filter(
                     (item) =>
