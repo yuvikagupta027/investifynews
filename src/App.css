@@ -1,0 +1,9 @@
+.colorrr {
+  background: linear-gradient(135deg, #6a5cff, #8f4bff);
+}
+
+.cardd:hover {
+  /* transform: scale(1.02); */
+  transform: translateY(-6px);
+  transition: all 0.3s ease;
+}
